@@ -1,0 +1,18 @@
+From the Zend_Validate introduction documentation page at
+http://framework.zend.com/manual/en/zend.validate.introduction.html
+
+The Zend_Validate component provides a set of commonly needed validators. It 
+also provides a simple validator chaining mechanism by which multiple validators
+ may be applied to a single datum in a user-defined order.
+ 
+ A validator examines its input with respect to some requirements and produces 
+ a boolean result - whether the input successfully validates against the 
+ requirements. If the input does not meet the requirements, a validator may 
+ additionally provide information about which requirement(s) the input does 
+ not meet.
+ 
+ -----------
+ The files in this folder are my validation classes with validators not 
+ available or found in the Zend libary. As all classes in the Zend_Awd they 
+ all directly or indirectly extend to a Zend class which in this case most 
+ likely is Zend_Validate_Abstract.

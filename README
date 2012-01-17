@@ -1,0 +1,8 @@
+The classes in this folder are part of My Framework build and based on the Zend
+Framework. The classes usually either extensions to Zend classes or expect one 
+or more Zend classes to be available with autoloader.
+
+Some classes may be used without the Zend Framework after a few minor changes 
+but this is not and will not be documented as the classes in this repository
+are strictly used within this project and framework. Feel free to copy such
+classes and create your own class but some credit is certainly appreciated.  
