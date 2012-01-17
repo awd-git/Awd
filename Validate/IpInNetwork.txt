@@ -1,0 +1,39 @@
+This validator class will test an IP against a provide network notation. The
+network notation can be a network range, or network address with CIDR or 32-bit
+decimal subnet mask notation. Note that the main validation method always uses
+the CIDR notation, i.e a bitmask will be converted into a CIDR.
+
+
+Examples for network notations
+------------------------------
+Network Range: 
+**************
+128.0.0.12-128.0.0.19
+true for all IP addresses inclusively in this range (i.e. from .12 to .19)
+
+CIDR notation:
+**************
+128.0.0.8/30
+block with 4 hosts
+true for IP addresses from .8-.11 (i.e. .8, .9, .10, .11)
+
+Subnet mask notation:
+*********************
+128.0.0.8/255.255.255.252
+same as CIDR notation
+
+Special Notes:
+--------------
+1) The network notation is validated, i.e. you have to pass a valid network and
+CIDR or subnet mask combination. For the network range the two values must be 
+valid IP addresses.
+
+2) A CIDR notation of /32, subnet mask /255.255.255.255 or a range with two 
+equal addresses will match for one host, i.e. the result is true if the network 
+address or the range addresses are identical to the IP address
+
+3) The network notation or a range has to be set prior to calling isValid() as
+is custom with all Zend validators. The notation can be set when instantiating
+the object as an array and 'network' as the index. The setter method is
+setNetworkNotation($notation) and expects a string as the argument.
+ 
