@@ -238,7 +238,6 @@ class Awd_Validate_IpInNetwork extends Zend_Validate_Ip {
             $this->_error(self::LOW_IN_NETWORK);
             return false;
         }
-print_this('what');
 
         $this->_error(self::MISSING_NETWORK);
         return false;
@@ -299,7 +298,6 @@ print_this('what');
             $msg = '[AWD] Programming error: The argument is not a boolean value';
             trigger_error($msg,E_USER_WARNING);
         }
-var_print_this($throw);
 
 
         $this->_throw = $throw;
