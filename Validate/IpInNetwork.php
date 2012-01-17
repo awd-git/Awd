@@ -483,10 +483,11 @@ var_print_this($throw);
      * @since Version 0.1.36
      * @version 0.1.36 2012/01/16 10:34:00 CST
      * @author aw
-     * @desc <p>A netmask is a decimal representation of 32-bit string where the beginning sequence is a complete
-     * set of 1 (one) followed by a complete set of 0 (zero). If valid the netmask string will be a CIDR numeric
-     * value and set to the proected property _cidr. If not valid the returned value is the line plus the index if
-     * the failure is in one of the segments.</p>
+     * @desc <p>The network address in a CIDR or subnet mask notation is the base of the assigned block.
+     * Because the size of the block is specified by the CIDR or subnet mask the base of a network address
+     * has to fit and match into the block size. This method evaluates the block size and then validates
+     * if the base of network address fits into the assigned block. If not valid the line plus the index
+     * of the failed segment is sent to method _invalidNetwork() triggering or throwing an error.</p>
      * @param string $network
      * @return true|string
      */
